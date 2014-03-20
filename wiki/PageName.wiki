@@ -1,0 +1,46 @@
+public class Aviao implements Comparable<Aviao> {
+	private String nome;
+	private int prioridade;
+
+	public Aviao(String nome, int prioridade) {
+		this.nome = nome;
+		this.prioridade = prioridade;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public int getPrioridade() {
+		return prioridade;
+	}
+
+	@Override
+	public int compareTo(Aviao aviao) {
+		return Integer.compare(prioridade, aviao.prioridade);
+	}
+}
+
+Pilha:
+LinkedList pilha = new LinkedList();
+pilha.addFirst(new Aviao(“aviao1”, 1));
+System.out.println(pilha.removeFirst());
+
+Fila:
+LinkedList fila = new LinkedList();
+fila.addLast(new Aviao(“aviao1”, 1));
+System.out.println(fila.removeFirst());
+
+Fila de prioridade:
+LinkedList prioridade = new LinkedList();
+prioridade.add(new Aviao(“aviao1”, 1));
+System.out.println(prioridade.pollFirst());
+
+for (Object object : collecao) {
+	System.out.println(object);
+}
+
+for (Iterator iterator = collecao.iterator(); iterator.hasNext(); ) {
+	Object object = iterator.next();
+	System.out.println(object);
+}
