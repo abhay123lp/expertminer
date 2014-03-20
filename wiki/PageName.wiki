@@ -1,3 +1,4 @@
+<pre>
 public class Aviao implements Comparable<Aviao> {
 	private String nome;
 	private int prioridade;
@@ -44,3 +45,4 @@ for (Iterator iterator = collecao.iterator(); iterator.hasNext(); ) {
 	Object object = iterator.next();
 	System.out.println(object);
 }
+</pre>
